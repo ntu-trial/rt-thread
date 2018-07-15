@@ -84,3 +84,5 @@ env:
   - RTT_BSP='frdm-k64f' RTT_TOOL_CHAIN='sourcery-arm'
   - RTT_BSP='fh8620' RTT_TOOL_CHAIN='sourcery-arm'
   - RTT_BSP='x1000' RTT_TOOL_CHAIN='sourcery-mips'
+after_success:
+- bash <(curl -s https://blackducksoftware.github.io/hub-detect/hub-detect.sh) --blackduck.hub.url="https://hubeval32.blackducksoftware.com" --blackduck.hub.username="ntu" --blackduck.hub.password="ntu@2018" --blackduck.hub.trust.cert=true --detect.policy.check=true
